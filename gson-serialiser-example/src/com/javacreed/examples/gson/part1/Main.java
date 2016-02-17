@@ -10,7 +10,7 @@ import com.google.gson.GsonBuilder;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Gson gson = new GsonBuilder().registerTypeAdapter(Book.class, new BookSerialiser()).create();
+		Gson gson = new GsonBuilder().registerTypeAdapter(Book.class, new BookSerialiser()).setPrettyPrinting().create();
 		
 		Book book = new Book();
 		book.setTitle("Java Puzzlers: Traps, Pitfalls, and Corner Cases");
